@@ -30,7 +30,7 @@ class Post(models.Model):
     )
 
     class Meta:
-        ordering = ("-publish",)
+        ordering = ("publish",)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
